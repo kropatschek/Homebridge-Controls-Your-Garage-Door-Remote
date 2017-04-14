@@ -17,6 +17,8 @@ class SimpleGarageDoorOpener {
     //get config values
     this.name = config['name'];
     this.doorSwitchPin = config['doorSwitchPin'] || 12;
+    this.doorSwitchPressTimeInMs = config['doorSwitchPressTimeInMs'] || 500;
+    this.doorSwitchValue = config['doorSwitchValue'] || 1;
     this.simulateTimeOpening = config['simulateTimeOpening'] || 15;
     this.simulateTimeOpen = config['simulateTimeOpen'] || 30;
     this.simulateTimeClosing = config['simulateTimeClosing'] || 15;
@@ -39,7 +41,8 @@ class SimpleGarageDoorOpener {
   }
 
   setupGarageDoorOpenerService (service) {
-    rpio.open(this.doorSwitchPin, rpio.OUTPUT, rpio.LOW);
+    // Set the initial state to high.  
+    rpio.open(this.doorSwitchPin, rpio.OUTPUT, rpio.HIGH);
 
     this.service.setCharacteristic(Characteristic.TargetDoorState, Characteristic.TargetDoorState.CLOSED);
     this.service.setCharacteristic(Characteristic.CurrentDoorState, Characteristic.CurrentDoorState.CLOSED);
@@ -73,10 +76,17 @@ class SimpleGarageDoorOpener {
   }
 
   openGarageDoor (callback) {
-    rpio.write(this.doorSwitchPin, rpio.HIGH);
-    rpio.sleep(0.5);
-    rpio.write(this.doorSwitchPin, rpio.LOW);
-
+    if (this.doorSwitchValue == 1) {
+      rpio.write(this.doorSwitchPin, rpio.LOW);
+      rpio.msleep(this.doorSwitchPressTimeInMs);
+      rpio.write(this.doorSwitchPin, rpio.HIGH);
+    } else {
+      rpio.write(this.doorSwitchPin, rpio.HIGH);
+      rpio.msleep(this.doorSwitchPressTimeInMs);
+      rpio.write(this.doorSwitchPin, rpio.LOW);
+    }
+  
+  
     this.log('Opening the garage door for...');
     this.simulateGarageDoorOpening();
     callback();
