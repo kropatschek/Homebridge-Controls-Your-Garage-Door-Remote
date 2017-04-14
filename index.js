@@ -79,13 +79,13 @@ class SimpleGarageDoorOpener {
 
   openGarageDoor (callback) {
     if (this.doorSwitchValue == 1) {
-      rpio.write(this.doorSwitchPin, rpio.LOW);
-      rpio.msleep(this.doorSwitchPressTimeInMs);
       rpio.write(this.doorSwitchPin, rpio.HIGH);
+      rpio.msleep(this.doorSwitchPressTimeInMs);
+      rpio.write(this.doorSwitchPin, rpio.LOW);
     } else {
-      rpio.write(this.doorSwitchPin, rpio.HIGH);
-      rpio.msleep(this.doorSwitchPressTimeInMs);
       rpio.write(this.doorSwitchPin, rpio.LOW);
+      rpio.msleep(this.doorSwitchPressTimeInMs);
+      rpio.write(this.doorSwitchPin, rpio.HIGH); 
     }
     
     this.log('Opening the garage door for...');
