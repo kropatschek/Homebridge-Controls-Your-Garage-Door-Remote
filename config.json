@@ -8,7 +8,7 @@
     "description": "This is an example configuration file. You can use this as a template for creating your own configuration file.",
     "platforms": [],
     "accessories": [{
-        "accessory" : "SimpleGarageDoorOpener",
+        "accessory" : "ControlYourGarageDoorRemote",
         "name" : "Garage",
         "doorSwitchPin" : 7,
         "simulateTimeOpening" : 22,
