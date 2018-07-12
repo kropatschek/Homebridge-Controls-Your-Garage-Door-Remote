@@ -1,4 +1,4 @@
-# Simple Garage Door Opener
+# Homebridge Controls Your Garage Door Remote
 
 [![npm version](https://badge.fury.io/js/homebridge-simple-garage-door-opener.svg)](https://badge.fury.io/js/homebridge-simple-garage-door-opener)
 
@@ -27,20 +27,22 @@ PLEASE NOTE THAT I DON'T HAVE MUCH EXPERIENCE IN BUILDING ELECTRICAL CIRCUITS AN
 
 
 #### Install Manually
-Clone the latest release [here](https://github.com/danielreiser/Homebridge-Simple-Garage-Door-Opener). Install via `npm -i -g`.
+Clone the latest release [here](https://github.com/kropatschek/Homebridge-Controls-Your-Garage-Door-Remote). Install via `npm -i -g`.
 
 
 #### Edit the ./homebridge/config.json
 You don't need that much to get started. Just tell Simple Garage Door Opener which GPIO you want to use and you're good to go. (More options available)
 
 ```
-"accessories": [{
-        "accessory": "SimpleGarageDoorOpener",
-        "name": "SimpleGarageDoorOpener",
-        "doorSwitchPin": 12,
-        "simulateTimeOpening": 15,
-        "simulateTimeOpen": 30,
-        "simulateTimeClosing": 15
+    "accessories": [{
+        "accessory" : "ControlsYourGarageDoorRemote",
+        "name" : "Garage",
+        "doorSwitchPin" : 7,
+        "simulateTimeOpening" : 22,
+        "doorSwitchPressTimeInMs" : 2000,
+        "doorSwitchActiveLow" : 1,
+        "simulateTimeOpen" : 42,
+        "simulateTimeClosing" : 22
     }]
 ```
 
