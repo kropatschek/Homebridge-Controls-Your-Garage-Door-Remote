@@ -18,7 +18,7 @@ class SimpleGarageDoorOpener {
     this.name = config['name'];
     this.doorSwitchPin = config['doorSwitchPin'] || 12;
     this.doorSwitchPressTimeInMs = config['doorSwitchPressTimeInMs'] || 1000;
-    this.doorSwitchNormallyOpen = config['doorSwitchNormallyOpen'] || 0;
+    this.doorSwitchActiveLow = config['doorSwitchActiveLow'] || 1;
     this.simulateTimeOpening = config['simulateTimeOpening'] || 15;
     this.simulateTimeOpen = config['simulateTimeOpen'] || 30;
     this.simulateTimeClosing = config['simulateTimeClosing'] || 15;
@@ -41,7 +41,7 @@ class SimpleGarageDoorOpener {
   }
 
   setupGarageDoorOpenerService (service) {
-    if (this.doorSwitchNormallyOpen == 1) {
+    if (this.doorSwitchActiveLow > 0) {
       rpio.open(this.doorSwitchPin, rpio.OUTPUT, rpio.LOW);
     } else {
       rpio.open(this.doorSwitchPin, rpio.OUTPUT, rpio.HIGH);
