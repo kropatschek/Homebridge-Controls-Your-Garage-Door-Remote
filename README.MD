@@ -1,8 +1,8 @@
 # Homebridge Controls Your Garage Door Remote
 
-[![npm version](https://badge.fury.io/js/homebridge-simple-garage-door-opener.svg)](https://badge.fury.io/js/homebridge-simple-garage-door-opener)
+[![npm version](https://badge.fury.io/js/homebridge-controls-your-garage-door-remote.svg)](https://badge.fury.io/js/homebridge-controls-your-garage-door-remote)
 
-A Homebridge Plugin for controlling your garage door via your iOS device.
+A Homebridge Plugin forked from [Daniel Reiser](https://github.com/danielreiser/Homebridge-Simple-Garage-Door-Opener) for controlling your garage door via your iOS device.
 
 Being frustrated about the lack of homekit-enabled garage door openers which don't need any modifications on the garage door itself, I created my own solution.
 Oh and it's pretty cheap too.
@@ -23,7 +23,7 @@ As I am living in a house with multiple parties, I can't modify the garage door 
 PLEASE NOTE THAT I DON'T HAVE MUCH EXPERIENCE IN BUILDING ELECTRICAL CIRCUITS AND THEREFORE WON'T PROVIDE HELP IN BUILDING THE CIRCUIT.
 
 #### Install via npm (>= v6.x.x)
-`npm install homebridge-simple-garage-door-opener -g`
+`npm install homebridge-controls-your-garage-door-remote -g`
 
 
 #### Install Manually
