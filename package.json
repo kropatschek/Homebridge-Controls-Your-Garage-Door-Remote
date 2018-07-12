@@ -1,22 +1,24 @@
 {
-  "name": "homebridge-simple-garage-door-opener",
+  "name": "homebridge-controls-your-garage-door-remote",
   "version": "1.0.6",
   "description": "Garage Door Opener plugin for Homebridge with auto-states",
-  "author": "Daniel Reiser",
+  "author": "Sebastian J. Kropatschek, Daniel Reiser",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/danielreiser/Homebridge-Simple-Garage-Door-Opener.git"
+    "url": "git://github.com/kropatschek/Homebridge-Controls-Your-Garage-Door-Remote.git"
   },
   "bugs": {
-    "url": "https://github.com/danielreiser/Homebridge-Simple-Garage-Door-Opener/issues",
-    "email": "hello@reiserdesign.de"
+    "url": "https://github.com/kropatschek/Homebridge-Controls-Your-Garage-Door-Remote/issues",
+    "email": "administrator@kropatschek.net"
   },
   "keywords": [
     "homebridge-plugin",
     "homebridge",
     "garage",
     "garagedoor",
+    "remote",
+    "remote control",
     "home"
   ],
   "engines": {
