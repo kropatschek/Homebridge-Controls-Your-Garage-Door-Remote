@@ -1,6 +1,6 @@
 {
   "name": "homebridge-controls-your-garage-door-remote",
-  "version": "1.0.6",
+  "version": "1.0.9",
   "description": "Garage Door Opener plugin for Homebridge with auto-states",
   "author": "Sebastian J. Kropatschek, Daniel Reiser",
   "license": "MIT",
@@ -29,5 +29,7 @@
     "rpio": "^0.9.13"
   },
   "devDependencies": {},
-  "scripts": {}
+  "scripts": {},
+  "homepage": "https://github.com/kropatschek/Homebridge-Controls-Your-Garage-Door-Remote#readme",
+  "main": "index.js"
 }

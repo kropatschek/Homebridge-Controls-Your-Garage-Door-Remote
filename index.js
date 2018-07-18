@@ -8,7 +8,7 @@ module.exports = (homebridge) => {
 	Service = homebridge.hap.Service;
 	Characteristic = homebridge.hap.Characteristic;
 
-	homebridge.registerAccessory('homebridge-controls-your-garage-door-remote', 'ControlsYourGarageDoorRemote', ControlsYourGarageDoorRemote);
+	homebridge.registerAccessory('Homebridge-Controls-Your-Garage-Door-Remote', 'ControlsYourGarageDoorRemote', ControlsYourGarageDoorRemote);
 };
 
 class ControlsYourGarageDoorRemote {
